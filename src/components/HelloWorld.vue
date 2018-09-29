@@ -2,7 +2,7 @@
   <div class="hello">
     <div class="custom-tree-container">
   <div class="block">
-    <p>使用 木木木木木</p>
+    <p>使用 renderContent</p>
     <el-tree
       :data="data"
       show-checkbox
