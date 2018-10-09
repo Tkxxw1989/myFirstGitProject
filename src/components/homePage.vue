@@ -1,15 +1,12 @@
 <template>
     <div>
-        <div>
-        系统登陆
-        <router-link to="foo">go to helloWorld</router-link>
-        <router-link to="secondRouter">go to secondLevel</router-link>
+        <div class="makeItCenter selectModule">
+            丹江口大坝安全监测信息系统
         </div>
-        <div>
+        <div class="makeItCenter">
         <el-button @click="gotoOnlineMonitor">在线监测</el-button>
         <el-button @click="gotoDataAnalysis">数据处理分析</el-button>
         <el-button @click="gotoSystemManagement">系统管理</el-button>
-        <router-view></router-view>
         </div>
     </div>
 </template>
@@ -29,3 +26,12 @@
         }
     }
 </script>
+<style lang="scss" scoped>
+.makeItCenter{
+    text-align: center;
+}
+.selectModule{
+    margin-top:20px;
+    margin-bottom: 20%;
+}
+</style>
