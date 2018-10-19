@@ -1,7 +1,6 @@
 <template>
         <div id="userLogin">
             <div class="title">
-                丹江口大坝安全监测信息系统
             </div>
             <div class="loginArea">
                  <div class="loginTitle">系统登陆</div>
@@ -66,10 +65,12 @@
 #userLogin{
     height:100vh;
     padding-top: 100px;
+    padding-bottom: 50px;
     position: relative;
+    background: url(../assets/images/login_background2.png) no-repeat;
     .title{
-   font-size: 20px;
-   text-align: center;
+   height: 60px;
+   background: url(../assets/images/lgoo.png) no-repeat center;
 }
 .loginArea{
         width: 400px;
@@ -90,6 +91,9 @@
         background-color: #fff45c;
         font-weight: bold;
         margin-bottom:10px;
+    }
+    .autoLogin{
+        color:#fff;
     }
 }
 .footer{

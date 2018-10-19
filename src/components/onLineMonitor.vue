@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="moduleTitle">
-        丹江口大坝安全监测信息系统
+            <img src="../assets/images/lgoo.png" alt="">
         </div>
-        <div>
+        <div class="moduleContent">
             <div class="menuList">
             <div class="eachModule" @click="gotoOnlineHome">首页</div>
             <div class="eachModule" @click="gotoTransfusion">渗流渗压</div>
@@ -58,22 +58,37 @@
         padding-left: 20px;
         background-color: #0d1e3c;
         color: #fff;
+        img{
+            height:28px;
+            vertical-align: middle;
+        }
+        margin-bottom: 5px;
     }
-    .menuList{
-        float:left;
+    .moduleContent{
+        height:calc(100vh - 55px);
+        .menuList{
+        height:100%;
         width:100px;
         background-color: #1e66dc;
         color:#fff;
+        float: left;
+        display:flex;
+        flex-direction: column;
     }
     .currentModule{
-        margin-left:100px;
+        height: 100%;
         padding-left: 10px;
+        background-color: #f0f3fc;
+        margin-left: 100px;
     }
     .eachModule{
         text-align: center;
         margin-top:10px;
         margin-bottom: 10px;
         cursor: pointer;
+        flex:auto;
     }
+    }
+    
 </style>
 
