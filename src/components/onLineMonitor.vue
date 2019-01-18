@@ -31,7 +31,7 @@
                 this.$router.push("/onlineMonitor/collectControl");
            },
            gotoTransfusion(){
-
+                     this.$router.push("/onlineMonitor/transfusion");
            },
            gotoStress(){
 
@@ -53,8 +53,8 @@
 </script>
 <style lang="scss" scoped>
     .moduleTitle{
-        height: 50px;
-        line-height: 50px;
+        height: 80px;
+        line-height: 80px;
         padding-left: 20px;
         background-color: #0d1e3c;
         color: #fff;

@@ -37,12 +37,12 @@
             gotoModuleSelect(){
                 let $this=this;
                 let type='日降雨量';
-                this.$$http({
+                /*this.$$http({
                     method:'get',
                     url:'/environments/'+type+'/all'
-                   /* method:'post',
+                    method:'post',
                     url:'monitor/fuzzy_search',
-                    data:{name:"变形监测"}*/
+                    data:{name:"变形监测"}
                 }).then(function(res){
                     if(res.status==200){
                         $this.$store.dispatch('increment',{amount:10}).then(()=>{
@@ -53,7 +53,8 @@
                     }else{
                         console.log(res.info);
                     }
-                })
+                })*/
+                 $this.$router.push({path:'homePage'});
             },
             gotoHelloWorld(){
                  this.$router.push({path:'foo'});

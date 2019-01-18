@@ -6,6 +6,7 @@ import onlineMonitorHome from '../views/onlineMonitorHome'
 import onlineMonitor from '@/components/onLineMonitor'
 import login from '../views/login'
 import collectControl from '../views/collectControl'
+import componentMehtodTest from '../components/componentMethodTest'
 Vue.use(Router)
 
 export default new Router({
@@ -39,7 +40,12 @@ export default new Router({
           path:"collectControl",
           name:"conllectControl",
           component:collectControl
+        },{
+          path:"transfusion",
+          name:"transfusion",
+          component:componentMehtodTest
         }
+
       ]
     }
 
