@@ -6,8 +6,8 @@
         <div class="moduleContent">
             <div class="menuList">
             <div class="eachModule" @click="gotoOnlineHome">首页</div>
-            <div class="eachModule" @click="gotoTransfusion">渗流渗压</div>
-            <div class="eachModule" @click="gotoStress">应力应变</div>
+            <div class="eachModule" @click="gotoTransfusion">调用子组件</div>
+            <div class="eachModule" @click="gotoStress">watch方法Demo</div>
             <div class="eachModule" @click="gotoEnvironmentInfo">环境量信息</div>
             <div class="eachModule" @click="gotoEarthQuake">强震监测</div>
             <div class="eachModule" @click="gotoCollectControl">采集控制</div>
@@ -31,10 +31,10 @@
                 this.$router.push("/onlineMonitor/collectControl");
            },
            gotoTransfusion(){
-                     this.$router.push("/onlineMonitor/transfusion");
+                this.$router.push("/onlineMonitor/transfusion");
            },
            gotoStress(){
-
+                this.$router.push("/onlineMonitor/stress");
            },
            gotoEnvironmentInfo(){
 

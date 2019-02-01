@@ -7,6 +7,7 @@ import onlineMonitor from '@/components/onLineMonitor'
 import login from '../views/login'
 import collectControl from '../views/collectControl'
 import componentMehtodTest from '../components/componentMethodTest'
+import watchMethod from '../views/watchMethod'
 Vue.use(Router)
 
 export default new Router({
@@ -44,8 +45,11 @@ export default new Router({
           path:"transfusion",
           name:"transfusion",
           component:componentMehtodTest
+        },{
+          path:"stress",
+          name:"stress",
+          component:watchMethod
         }
-
       ]
     }
 
