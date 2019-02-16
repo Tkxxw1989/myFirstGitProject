@@ -12,7 +12,7 @@
             <div class="eachModule" @click="gotoEarthQuake">强震监测</div>
             <div class="eachModule" @click="gotoCollectControl">采集控制</div>
             <div class="eachModule" @click="gotoInspection">巡视检查</div>
-            <div class="eachModule" @click="gotoVideoMonitor">视频监控</div>
+            <div class="eachModule" @click="gotoVideoMonitor">视频检测</div>
             </div>
             <div class="currentModule">
                 <router-view></router-view>
