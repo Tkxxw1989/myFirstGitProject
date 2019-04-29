@@ -60,52 +60,73 @@
       </div>
       </div>
       <div class="right">
-        <el-tree :data="treeData"></el-tree>
+        <el-tree
+      :data="treeData"
+      show-checkbox
+      node-key="id"
+      default-expand-all
+      :expand-on-click-node="false">
+      <span class="custom-tree-node" slot-scope="{ node }">
+        <span>{{ node.label }}</span>
+        <template v-if="node.id>4">
+        <span>
+          <el-button
+            type="text"
+            size="mini"
+            @click="() => append(node)">
+            Append
+          </el-button>
+        </span>
+        </template>
+      </span>
+    </el-tree>
       </div>
     </div>
 </template>
 <script>
+let id = 1000;
 export default{
+  
         name:"combineChart",
         data(){
             return {
               radio:'quantumRecord',
               dateRange:'',
-              treeData:[{
-          label: '一级 1',
+              treeData: [{
+        id: 1,
+        label: '一级 1',
+        children: [{
+          id: 4,
+          label: '二级 1-1',
           children: [{
-            label: '二级 1-1',
-            children: [{
-              label: '三级 1-1-1'
-            }]
-          }]
-        }, {
-          label: '一级 2',
-          children: [{
-            label: '二级 2-1',
-            children: [{
-              label: '三级 2-1-1'
-            }]
+            id: 9,
+            label: '三级 1-1-1'
           }, {
-            label: '二级 2-2',
-            children: [{
-              label: '三级 2-2-1'
-            }]
+            id: 10,
+            label: '三级 1-1-2'
           }]
+        }]
+      }, {
+        id: 2,
+        label: '一级 2',
+        children: [{
+          id: 5,
+          label: '二级 2-1'
         }, {
-          label: '一级 3',
-          children: [{
-            label: '二级 3-1',
-            children: [{
-              label: '三级 3-1-1'
-            }]
-          }, {
-            label: '二级 3-2',
-            children: [{
-              label: '三级 3-2-1'
-            }]
-          }]
-        }],
+          id: 6,
+          label: '二级 2-2'
+        }]
+      }, {
+        id: 3,
+        label: '一级 3',
+        children: [{
+          id: 7,
+          label: '二级 3-1'
+        }, {
+          id: 8,
+          label: '二级 3-2'
+        }]
+      }],
         tableData:[{"SubProject_Name":"混凝土坝","ItemProject_Name":"14坝段","Monitor_Name":"应力应变","Instrument_Name":"测缝计","Instrument_Type":"ABS","Survey_point_Number":"YL09887","Point_Code":"12923"},{"SubProject_Name":"混凝土坝","ItemProject_Name":"14坝段","Monitor_Name":"应力应变","Instrument_Name":"测缝计","Instrument_Type":"ABS","Survey_point_Number":"YL09887","Point_Code":"12923"},{"SubProject_Name":"混凝土坝","ItemProject_Name":"14坝段","Monitor_Name":"应力应变","Instrument_Name":"测缝计","Instrument_Type":"ABS","Survey_point_Number":"YL09887","Point_Code":"12923"},{"SubProject_Name":"混凝土坝","ItemProject_Name":"14坝段","Monitor_Name":"应力应变","Instrument_Name":"测缝计","Instrument_Type":"ABS","Survey_point_Number":"YL09887","Point_Code":"12923"},{"SubProject_Name":"混凝土坝","ItemProject_Name":"14坝段","Monitor_Name":"应力应变","Instrument_Name":"测缝计","Instrument_Type":"ABS","Survey_point_Number":"YL09887","Point_Code":"12923"},{"SubProject_Name":"混凝土坝","ItemProject_Name":"14坝段","Monitor_Name":"应力应变","Instrument_Name":"测缝计","Instrument_Type":"ABS","Survey_point_Number":"YL09887","Point_Code":"12923"}],
         columns:[
                     {field: 'SubProject_Name', title: '分部工程', width: 160, titleAlign: 'center',columnAlign:'center',isResize:true},
@@ -138,6 +159,18 @@ export default{
         }],
         value: ''
         }
+        },
+        methods:{
+          append(node) {
+     console.log(node);
+      },
+
+      remove(node, data) {
+        const parent = node.parent;
+        const children = parent.data.children || parent.data;
+        const index = children.findIndex(d => d.id === data.id);
+        children.splice(index, 1);
+      }
         }
 }
 </script>
@@ -176,6 +209,14 @@ export default{
             border:1px solid #ddd;
             overflow-y: auto;
             background-color: #fff;
+            .custom-tree-node {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-right: 8px;
+  }
   }
 }
 </style>
