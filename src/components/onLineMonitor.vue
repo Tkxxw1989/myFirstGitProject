@@ -8,10 +8,10 @@
             <div class="eachModule" @click="gotoOnlineHome">首页</div>
             <div class="eachModule" @click="gotoTransfusion">调用子组件</div>
             <div class="eachModule" @click="gotoStress">watch方法Demo</div>
-            <div class="eachModule" @click="gotoEnvironmentInfo">环境量信息</div>
-            <div class="eachModule" @click="gotoEarthQuake">强震监测</div>
+            <div class="eachModule" @click="gotoIviewSiderBar">iview侧边栏Demo</div>
+            <div class="eachModule" @click="gotoTransfer">transfer穿梭框Demo</div>
             <div class="eachModule" @click="gotoCollectControl">采集控制</div>
-            <div class="eachModule" @click="gotoInspection">巡视检查</div>
+            <div class="eachModule" @click="gotoAxios">Axios测试</div>
             <div class="eachModule" @click="gotoVideoMonitor">视频检测</div>
             </div>
             <div class="currentModule">
@@ -36,14 +36,14 @@
            gotoStress(){
                 this.$router.push("/onlineMonitor/stress");
            },
-           gotoEnvironmentInfo(){
-
+           gotoIviewSiderBar(){
+               this.$router.push("/onlineMonitor/iviewSiderBar");
            },
-           gotoEarthQuake(){
-
+           gotoTransfer(){
+               this.$router.push("/onlineMonitor/iviewTransfer");
            },
-           gotoInspection(){
-
+           gotoAxios(){
+                this.$router.push("/onlineMonitor/axiosTest");
            },
            gotoVideoMonitor(){
 

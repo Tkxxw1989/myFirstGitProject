@@ -8,6 +8,9 @@ import login from '../views/login'
 import collectControl from '../views/collectControl'
 import componentMehtodTest from '../components/componentMethodTest'
 import watchMethod from '../views/watchMethod'
+import siderBar from '../views/siderBar'
+import transFer from '../views/transFer'
+import axiosTest from  '../views/axiosTest'
 Vue.use(Router)
 
 export default new Router({
@@ -49,7 +52,20 @@ export default new Router({
           path:"stress",
           name:"stress",
           component:watchMethod
+        },{
+          path:"iviewSiderBar",
+          name:"iviewSiderBar",
+          component:siderBar
+        },{
+          path:"iviewTransfer",
+          name:"iviewTransfer",
+          component:transFer
+        },{
+          path:"axiosTest",
+          name:"axiosTest",
+          component:axiosTest
         }
+
       ]
     }
 
