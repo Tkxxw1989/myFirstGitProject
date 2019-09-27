@@ -9,6 +9,7 @@ import store from './store';
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import 'element-ui/lib/theme-chalk/index.css';
+import "@/assets/css/app.css";
 // 引入样式
 import 'vue-easytable/libs/themes-base/index.css'
 // 导入 table 和 分页组件

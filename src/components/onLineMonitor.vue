@@ -12,7 +12,7 @@
             <div class="eachModule" @click="gotoTransfer">transfer穿梭框Demo</div>
             <div class="eachModule" @click="gotoCollectControl">采集控制</div>
             <div class="eachModule" @click="gotoAxios">Axios测试</div>
-            <div class="eachModule" @click="gotoVideoMonitor">视频检测</div>
+            <div class="eachModule" @click="gotoMixin">混入demo</div>
             </div>
             <div class="currentModule">
                 <router-view></router-view>
@@ -45,8 +45,8 @@
            gotoAxios(){
                 this.$router.push("/onlineMonitor/axiosTest");
            },
-           gotoVideoMonitor(){
-
+           gotoMixin(){
+               this.$router.push("/onlineMonitor/mixinDemo");
            }
         }
     }

@@ -11,6 +11,7 @@ import watchMethod from '../views/watchMethod'
 import siderBar from '../views/siderBar'
 import transFer from '../views/transFer'
 import axiosTest from  '../views/axiosTest'
+import mixin from '../views/mixinDemo'
 Vue.use(Router)
 
 export default new Router({
@@ -64,8 +65,11 @@ export default new Router({
           path:"axiosTest",
           name:"axiosTest",
           component:axiosTest
+        },{
+          path:"mixinDemo",
+          name:"mixinDemo",
+          component:mixin
         }
-
       ]
     }
 
