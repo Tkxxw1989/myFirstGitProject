@@ -5,7 +5,7 @@
         </div>
         <div class="moduleContent">
             <div class="menuList">
-            <div class="eachModule" @click="gotoOnlineHome">首页</div>
+            <div class="eachModule" @click="goto3DCloud">三维云图</div>
             <div class="eachModule" @click="gotoTransfusion">调用子组件</div>
             <div class="eachModule" @click="gotoStress">watch方法Demo</div>
             <div class="eachModule" @click="gotoIviewSiderBar">iview侧边栏Demo</div>
@@ -24,8 +24,8 @@
     export default{
         name:"onlineMonitor",
         methods:{
-           gotoOnlineHome(){
-               this.$router.push("/onlineMonitor");
+           goto3DCloud(){
+               this.$router.push("/dataAnalysis");
            },
            gotoCollectControl(){
                 this.$router.push("/onlineMonitor/collectControl");
@@ -91,4 +91,3 @@
     }
     
 </style>
-

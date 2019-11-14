@@ -18,7 +18,7 @@
                 this.$router.push({path:"onlineMonitor"});
             },
             gotoDataAnalysis(){
-
+                this.$router.push({path:"dataAnalysis"});
             },
             gotoSystemManagement(){
                 

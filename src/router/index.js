@@ -12,6 +12,8 @@ import siderBar from '../views/siderBar'
 import transFer from '../views/transFer'
 import axiosTest from  '../views/axiosTest'
 import mixin from '../views/mixinDemo'
+import dataAnalysis from '../views/dataAnalysis'
+import threeDCloud from '../views/threeDCloud'
 Vue.use(Router)
 
 export default new Router({
@@ -31,6 +33,17 @@ export default new Router({
       path:'/homePage',
       name:'homePage',
       component:homePage
+    },{
+      path:'/dataAnalysis',
+      name:'dataAnalysis',
+      component:dataAnalysis,
+      children:[
+        {
+          path:"",
+          name:"threeDCloud",
+          component:threeDCloud
+        }
+      ]
     },{
       path:'/onlineMonitor',
       name:'onlineMonitor',
